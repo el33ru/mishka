@@ -1,0 +1,134 @@
+.about-us {
+  padding: 30px;
+}
+
+.about-us__header {
+  margin: 0;
+  padding: 0;
+
+  font-size: 25px;
+}
+
+.about-us__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.about-us__item--ecology {
+  position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 10px;
+
+      width: 32px;
+      height: 37px;
+
+      background-image: url("../img/ecology.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: black;
+    }
+}
+
+.about-us__item--price {
+  position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 10px;
+
+      width: 47px;
+      height: 27px;
+
+      background-image: url("../img/price.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: black;
+    }
+}
+
+.about-us__item--likes {
+  position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 10px;
+
+      width: 34px;
+      height: 27px;
+
+      background-image: url("../img/likes.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: black;
+    }
+}
+
+.about-us__item--handmade {
+  position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 10px;
+
+      width: 35px;
+      height: 34px;
+
+      background-image: url("../img/handmade.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: black;
+    }
+}
+
+.about-us__item--russian-manufacturer {
+  position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 10px;
+
+      width: 55px;
+      height: 23px;
+
+      background-image: url("../img/russian-manufacturer.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: black;
+    }
+}
+
+.about-us__item--gift-package {
+  position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 10px;
+
+      width: 33px;
+      height: 32px;
+
+      background-image: url("../img/gift-package.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: black;
+    }
+}
+
+.about-us__title {
+  margin: 0;
+  padding: 0;
+  padding-top: 85px;
+
+  font-size: 17px;
+  line-height: 20px;
+}

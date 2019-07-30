@@ -1,0 +1,90 @@
+.popular {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.popular__title {
+  margin: 0;
+  padding-top: 30px;
+
+  font-size: 25px;
+}
+
+.popular__item-week {
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+
+  font-size: 17px;
+  line-height: 20px;
+  color: $bg-lightgreen;
+}
+
+.popular__description {
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+  color: $bg-lightblack;
+}
+
+.popular__list {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+  color: $bg-lightblack;
+}
+
+.popular__field {
+  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.popular__value {
+  padding-top: 10px;
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.popular__item-picture {
+  margin: 0;
+  padding: 0;
+  margin-top: 28px;
+}
+
+.popular__item-image {
+  margin: 0;
+  padding: 0;
+
+  vertical-align: top;
+}
+
+.popular__price {
+  margin: 0;
+  padding: 0;
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  font-size: 17px;
+  line-height: 24px;
+  color: $bg-lightblack;
+  text-align: center;
+}
+
+.popular__send {
+  width: 100%;
+  margin-bottom: 30px;
+}
