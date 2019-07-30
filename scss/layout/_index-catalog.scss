@@ -1,0 +1,57 @@
+.index-catalog__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.index-catalog__item a {
+  display: inline-block;
+  padding: 30px 0px 30px 30px;
+  width: 90px;
+
+  font-size: 19px;
+  line-height: 24px;
+  color: #ffffff;
+
+  text-decoration: none;
+}
+
+.index-catalog__item--interior {
+  background-color: $bg-lightgreen;
+  position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 35px;
+
+      width: 40px;
+      height: 62px;
+
+      background-image: url("../img/interior.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: black;
+    }
+}
+
+.index-catalog__item--toys {
+  background-color: $bg-darkgreen;
+  position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 21px;
+      right: 27px;
+
+      width: 60px;
+      height: 60px;
+
+      background-image: url("../img/toy.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: black;
+    }
+}
+
