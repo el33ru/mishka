@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Мишка</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -11,14 +13,16 @@
     <img class="page-header__logo-image" src="img/logotype-mobile.png" width="86" height="35" alt="Мишка">
   </a>
   <nav class="main-nav">
-    <button class="main-nav__toggle main-nav__toggle--status" type="button">Открыть меню</button>
+    <button class="main-nav__toggle main-nav__toggle--status" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a href="catalog.html">Каталог товаров</a>
         </li>
         <li class="site-list__item">
-          <a href="knitting.html">Вязание на заказ</a>
+          <a href="form.html">Вязание на заказ</a>
         </li>
       </ul>
       <ul class="main-nav__list user-list">
@@ -37,17 +41,17 @@
 
 <main class="page-main">
 
-  <h1 class="page-main__header">Милые штуки ручной работы для дома</h1>
+  <h1 class="page-main__header">Милые штуки<br> ручной<br> работы для дома</h1>
 
-  <section class="catalog">
-    <div class="catalog__wrapper">
+  <section class="index-catalog">
+    <div class="index-catalog__wrapper">
       <h2 class="visually-hidden">Каталог товаров</h2>
-      <ul class="catalog__list">
-        <li class="catalog__item">
-          <a class="catalog__title catalog__title--interior" href="catalog.html">Предметы интерьера</a>
+      <ul class="index-catalog__list">
+        <li class="index-catalog__item index-catalog__item--interior">
+          <a class="index-catalog__title" href="catalog.html">Предметы интерьера</a>
         </li>
-        <li class="catalog__item">
-          <a class="catalog__title catalog__title--toys" href="catalog.html">Детские игрушки</a>
+        <li class="index-catalog__item index-catalog__item--toys">
+          <a class="index-catalog__title" href="catalog.html">Детские игрушки</a>
         </li>
       </ul>
     </div>
@@ -91,29 +95,31 @@
       <img class="popular__item-image" src="img/picture-basket.jpg" width="260" height="315" alt="Фото вязаной корзины">
     </p>
     <p class="popular__price">Цена: 990 руб.</p>
-    <button class="popullar_send button" type="button">Заказать</button>
+    <button class=" button popular__send" type="button">Заказать</button>
   </section>
 
+  <div class="wavy-line"></div>
+
   <section class="about-us">
-    <h2 class="about-us__title">Коротко о нас</h2>
+    <h2 class="about-us__header">Коротко о нас</h2>
     <ul class="about-us__list">
       <li class="about-us__item about-us__item--ecology">
-        <h3 class="advantages__title">Экологически чистые материалы</h3>
+        <h3 class="about-us__title">Экологически чистые материалы</h3>
       </li>
       <li class="about-us__item about-us__item--price">
-        <h3 class="advantages__title">Скандинавский стиль по российской цене</h3>
+        <h3 class="about-us__title">Скандинавский стиль по российской цене</h3>
       </li>
       <li class="about-us__item about-us__item--likes">
-        <h3 class="advantages__title">Увеличивает лайки на фотографиях</h3>
+        <h3 class="about-us__title">Увеличивает лайки на фотографиях</h3>
       </li>
       <li class="about-us__item about-us__item--handmade">
-        <h3 class="advantages__title">Связано вручную с любовью и умилением</h3>
+        <h3 class="about-us__title">Связано вручную с любовью и умилением</h3>
       </li>
       <li class="about-us__item about-us__item--russian-manufacturer">
-        <h3 class="advantages__title">Поддержка отечественного производителя</h3>
+        <h3 class="about-us__title">Поддержка отечественного производителя</h3>
       </li>
       <li class="about-us__item about-us__item--gift-package">
-        <h3 class="advantages__title">Поставляется в подарочной упаковке</h3>
+        <h3 class="about-us__title">Поставляется в подарочной упаковке</h3>
       </li>
     </ul>
   </section>
@@ -129,12 +135,18 @@
         </blockquote>
       </div>
       <p class="reviews__toggles slider__toggles">
-        <button class="slider__toggle" type="button">Влево</button>
-        <button class="slider__toggle" type="button">Вправо</button>
+        <button class="button slider__toggle slider__toggle--left" type="button">
+          <label class="visually-hidden">Влево</label>
+        </button>
+        <button class="button slider__toggle slider__toggle--right" type="button">
+          <label class="visually-hidden">Вправо</label>
+        </button>
       </p>
-      <a class="reviews__write button" href="#">Написать</a>
+      <a class="button reviews__write" href="#">Написать</a>
     </div>
   </section>
+
+  <div class="wavy-line"></div>
 
   <section class="contacts">
     <h2 class="contacts__title">Контакты</h2>
@@ -159,7 +171,7 @@
     <div class="contacts__map">
       <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A805ccde0dfa2a1fda8e7bfd4ee458bff9f9f383d83c32d184bfba55450d282df&amp;width=100%&amp;height=457&amp;lang=ru_RU&amp;scroll=false"></script>
     </div>
-    <a class="contacts__write button" href="#">Напишите нам</a>
+    <a class="button contacts__write" href="#">Напишите нам</a>
   </section>
 
 </main>
@@ -169,20 +181,28 @@
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
-            Инстаграмме</a>
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+            <span class="visually-hidden">Мы в
+            Инстаграмме</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
+          <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
+            <span class="visually-hidden">Мы в Твиттере</span>
+          </a>
         </li>
       </ul>
     </div>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">HTML Academy</span>
+      </a>
     </div>
   </div>
 </footer>
