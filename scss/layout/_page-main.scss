@@ -1,7 +1,8 @@
 .page-main {
   background-image: url("../img/hero-mobile.png");
-  background-position: 0 -15px;
+  background-position: center -15px;
   background-repeat: no-repeat;
+  background-color: #f9f9f9;
 }
 
 .page-main__header {
@@ -18,3 +19,18 @@
   text-align: center;
 }
 
+
+@media (min-width: $tablet-width) {
+  .page-main {
+    background-image: url("../img/hero-desktop.png");
+    background-position: center -35px;
+  }
+  .page-main__header {
+    padding-top: 120px;
+    margin-bottom: 372px;
+    width: 500px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+}

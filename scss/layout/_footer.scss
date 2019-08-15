@@ -2,6 +2,10 @@
   background-color: $bg-lightgray;
 }
 
+.page-footer__logo {
+  display: none;
+}
+
 .social__list {
   padding: 0;
   margin: 0;
@@ -74,4 +78,31 @@
 
   background-image: url("../img/htmlacademy.png");
   background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__logo {
+    max-width: 200px;
+    width: 100%;
+    display: block;
+  }
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 50px 50px 55px 50px;
+  }
+  .social__list {
+    border: none;
+  }
+  .social__item {
+    padding: 0;
+  }
+  .page-footer__copyright {
+    justify-content: flex-end;
+    max-width: 200px;
+    width: 100%;
+    padding: 0;
+  }
 }

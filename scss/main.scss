@@ -1,15 +1,17 @@
 @import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 @import 'base/base';
 
 @import 'components/button';
 @import 'components/wavy-line';
 @import 'components/straight-line';
+@import 'components/container';
+
 
 @import 'layout/header';
 @import 'layout/page-main';
 @import 'layout/index-catalog';
-@import 'layout/page-header__logo';
 @import 'layout/popular';
 @import 'layout/about-us';
 @import 'layout/reviews';

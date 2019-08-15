@@ -1,11 +1,11 @@
 .popular {
-  padding-left: 30px;
-  padding-right: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
 }
 
 .popular__title {
   margin: 0;
-  padding-top: 30px;
 
   font-size: 25px;
 }
@@ -23,7 +23,7 @@
 .popular__description {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
+  margin-top: 30px;
 
   font-size: 15px;
   line-height: 24px;
@@ -39,7 +39,7 @@
   border-collapse: collapse;
 
   font-size: 15px;
-  line-height: 24px;
+  line-height: 20px;
   font-weight: normal;
   color: $bg-lightblack;
 }
@@ -59,14 +59,19 @@
   border-bottom: 1px solid #ececec;
 }
 
-.popular__item-picture {
+.popular__item-picture-mobile {
   margin: 0;
   padding: 0;
   margin-top: 28px;
 }
 
+.popular__item-picture {
+  display: none;
+}
+
 .popular__item-image {
-  margin: 0;
+  display: block;
+  margin: auto;
   padding: 0;
 
   vertical-align: top;
@@ -75,8 +80,8 @@
 .popular__price {
   margin: 0;
   padding: 0;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  margin-top: 26px;
+  margin-bottom: 26px;
 
   font-size: 17px;
   line-height: 24px;
@@ -87,4 +92,63 @@
 .popular__send {
   width: 100%;
   margin-bottom: 30px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .popular {
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .popular__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .popular__title {
+    font-size: 43px;
+  }
+  .popular__item-week {
+    width: 110px;
+
+    text-align: center;
+  }
+  .popular__content {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .popular__wrapper {
+    margin-right: 44px;
+  }
+  .popular__description {
+    margin-top: 50px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .popular__item-picture {
+    padding: 0;
+    margin: 0;
+    margin-top: 55px;
+  }
+  .popular__list {
+    margin-top: 38px;
+  }
+  .popular__item-picture-mobile {
+    display: none;
+  }
+  .popular__price {
+    margin-top: 54px;
+    margin-bottom: 30px;
+
+    font-size: 20px;
+  }
+  .popular__send {
+    margin: 0;
+  }
+  .popular__item-picture {
+    display: block;
+
+    flex-shrink: 0;
+  }
 }

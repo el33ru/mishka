@@ -1,5 +1,5 @@
 .about-us {
-  padding: 30px;
+  margin: 30px;
 }
 
 .about-us__header {
@@ -22,7 +22,7 @@
       content: "";
       position: absolute;
       top: 30px;
-      left: 10px;
+      left: 7px;
 
       width: 32px;
       height: 37px;
@@ -40,7 +40,7 @@
       content: "";
       position: absolute;
       top: 30px;
-      left: 10px;
+      left: 0;
 
       width: 47px;
       height: 27px;
@@ -58,7 +58,7 @@
       content: "";
       position: absolute;
       top: 30px;
-      left: 10px;
+      left: 7px;
 
       width: 34px;
       height: 27px;
@@ -76,7 +76,7 @@
       content: "";
       position: absolute;
       top: 30px;
-      left: 10px;
+      left: 3px;
 
       width: 35px;
       height: 34px;
@@ -94,7 +94,7 @@
       content: "";
       position: absolute;
       top: 30px;
-      left: 10px;
+      left: -7px;
 
       width: 55px;
       height: 23px;
@@ -112,7 +112,7 @@
       content: "";
       position: absolute;
       top: 30px;
-      left: 10px;
+      left: 3px;
 
       width: 33px;
       height: 32px;
@@ -131,4 +131,58 @@
 
   font-size: 17px;
   line-height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    margin: 55px 50px 80px 50px;
+  }
+  .about-us__header {
+    font-size: 43px;
+  }
+  .about-us__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .about-us__item {
+    width: 334px;
+  }
+  .about-us__title {
+    padding-top: 112px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .about-us__item--ecology {
+    &::before {
+      top: 50px;
+    }
+  }
+  .about-us__item--price {
+    &::before {
+      top: 58px;
+    }
+  }
+  .about-us__item--likes {
+    &::before {
+      top: 63px;
+    }
+  }
+  .about-us__item--handmade {
+    &::before {
+      top: 50px;
+    }
+  }
+
+  .about-us__item--russian-manufacturer {
+    &::before {
+      top: 60px;
+    }
+  }
+
+  .about-us__item--gift-package {
+    &::before {
+      top: 60px;
+    }
+  }
 }
