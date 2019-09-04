@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "gulp-sourcemaps": "^2.6.5",
+    "jquery": "^3.4.1",
     "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1"
   },

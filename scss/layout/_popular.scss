@@ -109,7 +109,7 @@
     font-size: 43px;
   }
   .popular__item-week {
-    width: 110px;
+    padding-right: 25px;
 
     text-align: center;
   }
@@ -150,5 +150,53 @@
     display: block;
 
     flex-shrink: 0;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .popular {
+    position: relative;
+  }
+  .popular__header {
+    padding-top: 53px;
+    justify-content: left;
+  }
+  .popular__title {
+    order: 2;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+  .popular__item-week {
+    position: absolute;
+    left: 0;
+
+    order: 1;
+
+    padding-top: 10px;
+    width: 175px;
+  }
+  .popular__content {
+    width: 290px;
+  }
+  .popular__wrapper {
+    margin: 0;
+  }
+  .popular__list {
+    margin-top: 50px;
+  }
+  .popular__price{
+    margin-top: 110px;
+  }
+  .popular__item-picture img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    width: 525px;
+    height: 636px;
+
+    flex-shrink: 1;
   }
 }

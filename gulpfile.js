@@ -7,14 +7,15 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
 var scripts = {
-  output:'./js',
+  output:'./build/js',
   input:[
+    './node_modules/jquery/dist/jquery.min.js',
     './js/*.js'
   ]
 };
 
 var styles = {
-  output:'./css',
+  output:'./build/css',
   input:[
     './node_modules/normalize.css/normalize.css',
     './scss/main.scss'

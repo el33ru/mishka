@@ -27,7 +27,7 @@
       width: 32px;
       height: 37px;
 
-      background-image: url("../img/ecology.png");
+      background-image: url("../../img/ecology.png");
       background-repeat: no-repeat;
       background-position: 0 0;
       color: black;
@@ -45,7 +45,7 @@
       width: 47px;
       height: 27px;
 
-      background-image: url("../img/price.png");
+      background-image: url("../../img/price.png");
       background-repeat: no-repeat;
       background-position: 0 0;
       color: black;
@@ -63,7 +63,7 @@
       width: 34px;
       height: 27px;
 
-      background-image: url("../img/likes.png");
+      background-image: url("../../img/likes.png");
       background-repeat: no-repeat;
       background-position: 0 0;
       color: black;
@@ -81,7 +81,7 @@
       width: 35px;
       height: 34px;
 
-      background-image: url("../img/handmade.png");
+      background-image: url("../../img/handmade.png");
       background-repeat: no-repeat;
       background-position: 0 0;
       color: black;
@@ -99,7 +99,7 @@
       width: 55px;
       height: 23px;
 
-      background-image: url("../img/russian-manufacturer.png");
+      background-image: url("../../img/russian-manufacturer.png");
       background-repeat: no-repeat;
       background-position: 0 0;
       color: black;
@@ -117,7 +117,7 @@
       width: 33px;
       height: 32px;
 
-      background-image: url("../img/gift-package.png");
+      background-image: url("../../img/gift-package.png");
       background-repeat: no-repeat;
       background-position: 0 0;
       color: black;
@@ -142,10 +142,11 @@
   }
   .about-us__wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: left;
   }
   .about-us__item {
-    width: 334px;
+    width: 314px;
+    margin-right: 20px;
   }
   .about-us__title {
     padding-top: 112px;
@@ -173,16 +174,21 @@
       top: 50px;
     }
   }
-
   .about-us__item--russian-manufacturer {
     &::before {
       top: 60px;
     }
   }
-
   .about-us__item--gift-package {
     &::before {
       top: 60px;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us__item {
+    width: 330px;
+    margin-right: 20px;
   }
 }

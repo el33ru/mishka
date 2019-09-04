@@ -16,6 +16,10 @@
   display: none;
 }
 
+.logo__desktop {
+  display: none;
+}
+
 .js__toggle {
   cursor: pointer;
   position: absolute;
@@ -27,7 +31,7 @@
   height: 14px;
 
   background-color: #ffffff;
-  background-image: url("../img/menu.png");
+  background-image: url("../../img/menu.png");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -35,6 +39,18 @@
 
 .nav__list {
   @include reset-list;
+}
+
+.site-nav__desktop {
+  display: none;
+}
+
+.site-nav {
+  width: 100%;
+}
+
+.user-nav {
+  width: 100%;
 }
 
 .site-list__item {
@@ -52,6 +68,7 @@
   padding-left: 75px;
 
   font-size: 17px;
+  line-height: 19px;
   color: black;
 
   text-decoration: none;
@@ -78,7 +95,7 @@
     width: 18px;
     height: 18px;
 
-    background-image: url("../img/search.png");
+    background-image: url("../../img/search.png");
   }
 }
 
@@ -96,7 +113,7 @@
     width: 21px;
     height: 18px;
 
-    background-image: url("../img/basket.png");
+    background-image: url("../../img/basket.png");
   }
 }
 
@@ -112,6 +129,7 @@
   padding-left: 75px;
 
   font-size: 17px;
+  line-height: 19px;
   color: black;
 
   text-decoration: none;
@@ -135,21 +153,29 @@
   .logo__tablet {
     display: block;
     order: 1;
+    flex-grow: 1;
 
+    width: 315px;
     padding-left: 50px;
-    width: 370px;
     padding-top: 21px;
     padding-bottom: 21px;
 
     border-bottom: 1px solid #ececec;
-    box-sizing: border-box;
   }
   .site-nav {
     order: 3;
+
+    width: auto;
   }
   .user-nav {
-    flex-grow: 1;
     order: 2;
+
+    width: auto;
+  }
+  .user-list__item--basket a {
+    padding-left: 83px;
+    padding-right: 50px;
+    text-align: right;
   }
   .js__toggle {
     display: none;
@@ -162,11 +188,16 @@
     padding-top: 36px;
     padding-bottom: 36px;
   }
+  .user-list__item--search a {
+    padding-top: 46px;
+    padding-bottom: 45px;
+  }
   .user-list__search__no-caption {
     display: none;
   }
   .user-list__item--search {
     width: 80px;
+
     border-left: 1px solid #ececec;
     border-right: 1px solid #ececec;
   }
@@ -176,24 +207,19 @@
       left: 30px;
     }
   }
-  .user-list__item a {
-    padding-left: 83px;
-  }
   .user-list__item--basket {
     &:before {
       top: 36px;
       left: 32px;
     }
   }
-  .site-list {
-    background-color: #f9f9f9;
-    &:first-child {
+  .site-list__item__catalog {
       padding-left: 50px;
     }
-  }
   .site-list__item {
     display: inline-block;
 
+    background-color: #f9f9f9;
     border-bottom: none;
   }
   .site-list__item a {
@@ -202,6 +228,7 @@
     margin-right: 36px;
 
     font-size: 15px;
+    line-height: 24px;
     white-space: nowrap;
   }
   .free-delivery {
@@ -213,8 +240,90 @@
     padding-top: 22px;
     padding-right: 50px;
 
+    font-size: 15px;
+    line-height: 24px;
     font-weight: normal;
     background-color: #f9f9f9;
   }
 }
 
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ececec;
+  }
+  .logo__tablet {
+    display: none;
+  }
+  .site-nav__desktop {
+    display: block;
+  }
+  .logo__desktop {
+    display: block;
+    order: 2;
+    flex-grow: 1;
+
+    padding-left: 36px;
+  }
+  .site-nav {
+    order: 1;
+  }
+  .site-list__item__catalog {
+     padding: 0;
+     margin: 0;
+   }
+  .site-nav__desktop {
+    order: 4;
+  }
+  .site-list__item {
+    display: inline-block;
+
+    width: 100%;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #ececec;
+  }
+  .site-list__item a {
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    font-size: 17px;
+    line-height: 19px;
+  }
+  .site-list__item__catalog a {
+    padding-left: 50px;
+    padding-right: 36px;
+
+    border-right: 1px solid #ececec;
+  }
+  .site-list__item__knitting a {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .site-list__item__desktop {
+    display: inline-block;
+
+    background-color: #f9f9f9;
+    border-bottom: none;
+  }
+  .site-list__item__desktop  a {
+    display: block;
+    padding: 0;
+    margin-top: 22px;
+    margin-left: 50px;
+
+    text-decoration: none;
+    color: black;
+
+    font-size: 15px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+  .site-list__item__desktop__sales {
+    padding-left: 12px;
+  }
+}
