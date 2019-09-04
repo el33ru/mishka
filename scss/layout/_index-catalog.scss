@@ -5,10 +5,10 @@
   list-style: none;
 }
 
+
 .index-catalog__item a {
-  display: inline-block;
+  display: block;
   padding: 30px 0px 30px 30px;
-  width: 90px;
 
   font-size: 19px;
   line-height: 24px;
@@ -32,7 +32,6 @@
       background-image: url("../../img/interior.png");
       background-repeat: no-repeat;
       background-position: 0 0;
-      color: black;
     }
 }
 
@@ -99,4 +98,5 @@
   //  }
   //}
 }
+
 
