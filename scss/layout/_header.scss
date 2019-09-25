@@ -75,6 +75,10 @@
   text-decoration: none;
 }
 
+.site-list__item__catalog {
+  border-top: 1px solid #ececec;
+}
+
 .user-list__item {
   display: inline-block;
   width: 100%;
@@ -215,12 +219,13 @@
     }
   }
   .site-list__item__catalog {
-      padding-left: 50px;
+    padding-left: 50px;
+
+    border: none;
     }
   .site-list__item {
     display: inline-block;
 
-    background-color: #f9f9f9;
     border-bottom: none;
   }
   .site-list__item a {
@@ -234,7 +239,7 @@
   }
   .free-delivery {
     display: flex;
-    flex-grow: 1;
+
     justify-content: flex-end;
     order: 4;
 
@@ -244,7 +249,7 @@
     font-size: 15px;
     line-height: 24px;
     font-weight: normal;
-    background-color: #f9f9f9;
+
   }
 }
 
@@ -308,7 +313,6 @@
   .site-list__item__desktop {
     display: inline-block;
 
-    background-color: #f9f9f9;
     border-bottom: none;
   }
   .site-list__item__desktop  a {

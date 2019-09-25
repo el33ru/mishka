@@ -3,45 +3,53 @@
   margin: 0;
   margin-left: 30px;
   margin-right: 30px;
+  margin-top: 30px;
 
   list-style: none;
 }
 
 .catalog__item {
-  margin-top: 30px;
-
   box-sizing: border-box;
   border: 1px solid #ededed;
+
+  margin-top: 30px;
+}
+
+.catalog__image {
+  width: 100%;
+}
+
+.catalog__content {
+  padding: 0 27px;
 }
 
 .catalog__title {
   padding: 0;
   margin: 0;
-  padding-top: 30px;
-  padding-left: 27px;
+  padding-top: 25px;
 
   font-size: 17px;
+  line-height: 24px;
 }
 
 .catalog__characteristic {
   padding: 0;
   margin: 0;
-  padding-top: 18px;
-  padding-left: 27px;
   padding-bottom: 25px;
 
   font-size: 13px;
+  line-height: 30px;
   font-weight: normal;
 }
 
 .catalog__price {
   padding: 0;
   margin: 0;
-  padding-top: 25px;
-  padding-left: 27px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 25px;
 
   font-size: 15px;
+  line-height: 24px;
 }
 
 .catalog__price--basket {
@@ -52,11 +60,82 @@
       display: inline-block;
 
       top: 22px;
-      right: 27px;
+      right: 0;
 
       width: 20px;
       height: 19px;
 
       background-image: url("../../img/basket.png");
     }
+}
+
+
+@media (min-width: $tablet-width) {
+  .page__wrapper {
+    position: relative;
+    z-index: 1;
+
+    margin-top: -47px;
+  }
+  .catalog__list {
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .page-title {
+    padding-top: 100px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+  .catalog__image {
+    display: block;
+    width: 334px;
+    height: 334px;
+  }
+  .catalog__item {
+    display: flex;
+
+    margin-top: 55px;
+  }
+  .catalog__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-basis: 150px;
+  }
+  .catalog__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .catalog__characteristic{
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .catalog__price {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .catalog__list {
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .catalog__item {
+    flex-direction: column;
+    width: 316px;
+
+    margin: 0;
+  }
+  .catalog__characteristic {
+    padding-bottom: 15px;
+  }
+  .catalog__image {
+    height: 462px;
+  }
 }

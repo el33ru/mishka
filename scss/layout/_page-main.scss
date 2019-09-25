@@ -22,11 +22,16 @@
 
 @media (min-width: $tablet-width) {
   .page-main__wrapper {
+    position: relative;
+    z-index: 1;
+
+    margin-top: -47px;
+
     background-image: url("../../img/hero-desktop.png");
-    background-position: center -35px;
+    background-position: center 0;
   }
   .page-main__header {
-    padding-top: 120px;
+    padding-top: 155px;
     padding-bottom: 372px;
     width: 500px;
 
@@ -37,16 +42,8 @@
 
 
 @media (min-width: $desktop-width) {
-  .page-main__wrapper {
-    position: relative;
-    z-index: 1;
-
-    margin-top: -47px;
-
-    background-position: center 10px;
-  }
   .page-main__header {
-    padding-top: 165px;
+    padding-top: 155px;
     padding-bottom: 358px;
     width: 620px;
 
