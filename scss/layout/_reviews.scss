@@ -58,20 +58,26 @@
   height: 50px;
 
   border: 1px solid #ececec;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
+    }
 }
 
 .slider__toggle--left {
-  background-image: url("../../img/left.png");
+  background-image: url("../../img/left.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 50px 26px;
 }
 
 .slider__toggle--right {
-  background-image: url("../../img/left.png");
+  background-image: url("../../img/right.svg");
   background-repeat: no-repeat;
   background-position: center;
-
-  transform: rotate(180deg);
+  background-size: 50px 26px;
 }
 
 .reviews__write {
@@ -80,6 +86,13 @@
   margin-top: 40px;
 
   text-decoration: none;
+  &:hover {
+    background-color: $bg-lightblack;
+    color: #ffffff;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -88,13 +101,20 @@
     padding: 80px 50px 40px 50px;
     margin-bottom: 68px;
 
-    background-image: url("../../img/review.png");
+    background-image: url("../../img/review.jpg");
     background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
+
   .reviews__title {
     font-size: 43px;
     line-height: 50px;
   }
+
   .reviews__text {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -102,9 +122,11 @@
     font-size: 17px;
     line-height: 30px;
   }
+
   .reviews__author-name {
     font-size: 18px;
   }
+
   .slider__toggles {
     position: absolute;
     display: flex;
@@ -115,9 +137,11 @@
     bottom: 50px;
     right: 50px;
   }
+
   .slider__toggle {
     border: none;
   }
+
   .reviews__write {
     position: absolute;
 
@@ -126,6 +150,13 @@
 
     right: 50px;
     top: 80px;
+      &:hover {
+        background-color: $bg-lightblack;
+        color: #ffffff;
+      }
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+      }
   }
 }
 
@@ -134,13 +165,16 @@
     padding: 75px 50px 100px 50px;
     background-position: 50px 0;
   }
+
   .reviews__title {
     font-size: 53px;
     line-height: 57px;
   }
+
   .reviews__text {
     width: 770px;
   }
+
   .slider__toggles {
     bottom: 100px;
   }

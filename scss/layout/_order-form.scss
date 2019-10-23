@@ -1,7 +1,3 @@
-//.order-form {
-//  padding: 30px;
-//}
-
 .order-form__header {
   padding: 30px 30px 0 30px;
   margin: 0;
@@ -106,6 +102,19 @@ fieldset {
   }
 }
 
+.order-form__label__radio {
+  &:hover {
+    &::before {
+      border: 2px solid $bg-lightgreen;
+    }
+  }
+  &:active {
+    &::before {
+      border: 2px solid #c7c7c7;
+    }
+  }
+}
+
 .order-form__radio:checked {
   & + span {
     &::after {
@@ -153,6 +162,19 @@ fieldset {
   }
 }
 
+.order-form__label__сheck {
+  &:hover {
+    &::before {
+      border: 2px solid $bg-lightgreen;
+    }
+  }
+  &:active {
+    &::before {
+      border: 2px solid #c7c7c7;
+    }
+  }
+}
+
 .order-form__checkbox:checked {
   & + span {
     &::after {
@@ -165,7 +187,8 @@ fieldset {
       width: 22px;
       height: 16px;
 
-      background-image: url("../../img/tick.png");
+      background-image: url("../../img/tick.svg");
+      background-repeat: no-repeat;
     }
   }
 }
@@ -185,7 +208,27 @@ fieldset {
   height: 50px;
 
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #000000;
+
+  font-family: "Open Sans";
+  font-size: 17px;
+  line-height: 18px;
+  color: #444444;
+
+  outline: none;
+  &::placeholder {
+    font-family: "Open Sans";
+    font-size: 17px;
+    color: #444444;
+    opacity: 0.3;
+  }
+  &:hover {
+    border-bottom: 2px solid #62d1ba;
+  }
+  &:focus {
+    border-bottom: 2px solid #62d1ba;
+    color: #444444;
+  }
 }
 
 .order-form__label__family {
@@ -204,8 +247,9 @@ fieldset {
 
 .order-form__description--phone {
   position: relative;
-  &::after {
-    content: "";
+}
+
+.order-form__description__phone-icon {
     position: absolute;
 
     bottom: 17px;
@@ -214,7 +258,19 @@ fieldset {
     width: 25px;
     height: 24px;
 
-    background-image: url("../../img/phone.png");
+    opacity: 0.2;
+
+    fill: #000000;
+}
+
+.order-form__description--phone:hover {
+  &:hover .order-form__description__phone-icon {
+    opacity: 1;
+
+    fill: #62d1ba;
+  }
+  &:focus .order-form__description__phone-icon {
+    fill: #62d1ba;
   }
 }
 
@@ -233,8 +289,9 @@ fieldset {
 
 .order-form__description--email {
   position: relative;
-  &::after {
-    content: "";
+}
+
+.order-form__description__email-icon {
     position: absolute;
 
     bottom: 17px;
@@ -243,7 +300,19 @@ fieldset {
     width: 32px;
     height: 21px;
 
-    background-image: url("../../img/mail.png");
+    opacity: 0.2;
+
+    fill: #000000;
+  }
+
+.order-form__description--email:hover {
+  &:hover .order-form__description__email-icon {
+    opacity: 1;
+
+    fill: #62d1ba;
+  }
+  &:focus .order-form__description__email-icon {
+    fill: #62d1ba;
   }
 }
 
@@ -253,13 +322,35 @@ fieldset {
 
 .order-form__additionally {
   margin: 0;
-  padding: 0;
-  margin-top: 10px;
+  padding: 10px;
+  margin-top: 20px;
   width: 100%;
   min-height: 140px;
+  max-height: 400px;
+  resize: vertical;
+  outline: none;
 
   box-sizing: border-box;
   border: 2px solid $bg-lightblack;
+
+  font-family: "Open Sans";
+  font-size: 17px;
+  line-height: 18px;
+  color: #444444;
+  &::placeholder {
+    font-family: "Open Sans";
+    font-size: 17px;
+    line-height: 18px;
+    color: #444444;
+    opacity: 0.3;
+  }
+  &:hover {
+    border: 2px solid #62d1ba;
+  }
+  &:focus {
+    border: 2px solid #62d1ba;
+    color: #444444;
+  }
 }
 
 .order-form__always {
@@ -281,6 +372,13 @@ fieldset {
   margin-bottom: 25px;
 
   text-decoration: none;
+  &:hover {
+    background-color: $bg-lightblack;
+    color: #ffffff;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .order-form__send__wrapper {
@@ -343,6 +441,7 @@ fieldset {
 
     padding-left: 80px;
     min-height: 50px;
+
     &::before {
       top: 0;
       left: 0;
@@ -388,6 +487,7 @@ fieldset {
     padding-left: 80px;
     min-height: 50px;
     margin-top: 25px;
+
     &::before {
       content: "";
       position: absolute;
@@ -414,8 +514,6 @@ fieldset {
 
         width: 33px;
         height: 22px;
-
-        background-image: url("../../img/tick-desktop.png");
       }
     }
   }
@@ -427,6 +525,30 @@ fieldset {
   .order-form__FIO {
     padding-top: 25px;
     padding-bottom: 50px;
+  }
+
+  .order-form__text {
+    box-sizing: border-box;
+    padding-left: 15px;
+
+    font-size: 19px;
+    &::placeholder {
+      font-family: "Open Sans";
+      font-size: 19px;
+      color: #444444;
+      opacity: 0.3;
+    }
+    &:focus {
+      padding-left: 15px;
+    }
+  }
+
+  .order-form__description__phone-icon {
+    right: 25px;
+  }
+
+  .order-form__description__email-icon {
+    right: 20px;
   }
 
   .order-form__label__name {
@@ -470,25 +592,42 @@ fieldset {
     background-color: $bg-lightgray;
   }
 
-  .order-form__description--phone {
-    &::after {
-      right: 20px;
-    }
-  }
-
-  .order-form__description--email {
-    &::after {
-      right: 20px;
-    }
-  }
-
   .order-form__optionally {
     margin-top: 0;
     padding-top: 25px;
   }
 
   .order-form__additionally {
+    margin: 0;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    min-height: 140px;
+
+    box-sizing: border-box;
+    border: 2px solid $bg-lightblack;
+    &::placeholder {
+      font-family: "Open Sans";
+      font-size: 17px;
+      line-height: 18px;
+      color: #444444;
+      opacity: 0.3;
+    }
+    &:hover {
+      border: 2px solid #62d1ba;
+    }
+    &:focus {
+      border: 2px solid #62d1ba;
+      color: #444444;
+    }
+  }
+
+  .order-form__additionally {
     margin-top: 25px;
+    font-size: 19px;
+    &::placeholder {
+      font-size: 19px;
+    }
   }
 
   .order-form__send__wrapper {

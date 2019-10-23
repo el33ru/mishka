@@ -13,10 +13,23 @@
   border: 1px solid #ededed;
 
   margin-top: 30px;
+  &:hover {
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1)
+  }
+  &:active {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1)
+  }
 }
 
-.catalog__image {
-  width: 100%;
+//.catalog__image {
+//   width: 100%;
+// }
+
+.catalog__images {
+  text-align: center;
+  background-color: #f1f1f1;
+  max-height: 195px;
+  overflow: hidden;
 }
 
 .catalog__content {
@@ -52,21 +65,33 @@
   line-height: 24px;
 }
 
-.catalog__price--basket {
+.catalog__content__footer {
   position: relative;
-    &:after {
-      content: "";
-      position: absolute;
-      display: inline-block;
+}
 
-      top: 22px;
-      right: 0;
+.catalog__basket-icon {
+  position: absolute;
+  cursor: pointer;
 
-      width: 20px;
-      height: 19px;
+  bottom: 30px;
+  right: 0;
 
-      background-image: url("../../img/basket.png");
-    }
+  width: 21px;
+  height: 18px;
+
+  opacity: 0.2;
+
+  fill: #231F20;
+  &:hover {
+    opacity: 1;
+
+    fill: #63d1bb;
+  }
+  &:active {
+    opacity: 0.3;
+
+    fill: #63d1bb;
+  }
 }
 
 
@@ -77,27 +102,37 @@
 
     margin-top: -47px;
   }
-  .catalog__list {
-    margin-top: 80px;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
+
   .page-title {
     padding-top: 100px;
 
     font-size: 43px;
     line-height: 50px;
   }
+
+  .catalog__list {
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .catalog__images {
+    max-height: 334px;
+    overflow: hidden;
+  }
+
   .catalog__image {
     display: block;
     width: 334px;
     height: 334px;
   }
+
   .catalog__item {
     display: flex;
 
     margin-top: 55px;
   }
+
   .catalog__content {
     display: flex;
     flex-direction: column;
@@ -105,14 +140,17 @@
     flex-grow: 1;
     flex-basis: 150px;
   }
+
   .catalog__title {
     font-size: 20px;
     line-height: 24px;
   }
+
   .catalog__characteristic{
     font-size: 15px;
     line-height: 30px;
   }
+
   .catalog__price {
     font-size: 17px;
     line-height: 24px;
@@ -126,15 +164,23 @@
     display: flex;
     justify-content: space-between;
   }
+
   .catalog__item {
     flex-direction: column;
     width: 316px;
 
     margin: 0;
   }
+
   .catalog__characteristic {
     padding-bottom: 15px;
   }
+
+  .catalog__images {
+    max-height: 462px;
+    overflow: hidden;
+  }
+
   .catalog__image {
     height: 462px;
   }

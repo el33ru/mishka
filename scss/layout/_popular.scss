@@ -59,14 +59,10 @@
   border-bottom: 1px solid #ececec;
 }
 
-.popular__item-picture-mobile {
+.popular__item-picture {
   margin: 0;
   padding: 0;
   margin-top: 28px;
-}
-
-.popular__item-picture {
-  display: none;
 }
 
 .popular__item-image {
@@ -92,64 +88,86 @@
 .popular__send {
   width: 100%;
   margin-bottom: 30px;
+    &:hover {
+      background-color: $bg-lightblack;
+      color: #ffffff;
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
 }
+
 
 
 @media (min-width: $tablet-width) {
   .popular {
+    position: relative;
     margin-top: 60px;
     margin-left: 50px;
     margin-right: 50px;
   }
+
   .popular__header {
     display: flex;
     justify-content: space-between;
   }
+
   .popular__title {
     font-size: 43px;
   }
+
   .popular__item-week {
     padding-right: 25px;
+    width: 80px;
 
+    line-height: 17px;
     text-align: center;
   }
+
   .popular__content {
     display: flex;
+
+    width: 290px;
     margin-bottom: 50px;
   }
-  .popular__wrapper {
-    margin-right: 44px;
-  }
+
   .popular__description {
     margin-top: 50px;
 
     font-size: 17px;
     line-height: 30px;
   }
+
   .popular__item-picture {
     padding: 0;
     margin: 0;
     margin-top: 55px;
   }
+
   .popular__list {
     margin-top: 38px;
   }
-  .popular__item-picture-mobile {
-    display: none;
-  }
+
   .popular__price {
     margin-top: 54px;
     margin-bottom: 30px;
 
     font-size: 20px;
   }
+
   .popular__send {
     margin: 0;
   }
-  .popular__item-picture {
-    display: block;
 
-    flex-shrink: 0;
+  .popular__item-picture img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 333px;
+    height: 404px;
+
+    flex-shrink: 1;
   }
 }
 
@@ -158,37 +176,41 @@
   .popular {
     position: relative;
   }
+
   .popular__header {
     padding-top: 53px;
     justify-content: left;
   }
+
   .popular__title {
     order: 2;
 
     font-size: 53px;
     line-height: 57px;
   }
+
   .popular__item-week {
     position: absolute;
-    left: 0;
-
-    order: 1;
-
-    padding-top: 10px;
-    width: 175px;
+    top: 65px;
+    left: 45px;
   }
+
   .popular__content {
     width: 290px;
   }
+
   .popular__wrapper {
     margin: 0;
   }
+
   .popular__list {
     margin-top: 50px;
   }
+
   .popular__price{
     margin-top: 110px;
   }
+
   .popular__item-picture img {
     position: absolute;
     right: 0;
