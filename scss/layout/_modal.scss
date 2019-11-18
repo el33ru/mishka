@@ -1,0 +1,158 @@
+.modal {
+  position: fixed;
+
+  background-color: #ffffff;
+
+  display: none;
+}
+
+.modal-show {
+  display: block;
+  //animation-name: bounce;
+  //animation-duration: 0.6s;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.7);
+  z-index: 2;
+}
+
+.modal-basket {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+
+  padding: 0;
+  margin: 0 auto;
+  width: 320px;
+  border: 1px solid #c7c7c7;
+
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+
+  text-align: center;
+}
+
+.modal-basket__title {
+  display: inline-block;
+
+  padding: 0;
+  margin: 0;
+  padding-top: 35px;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 150px;
+
+  font-family: "Open Sans";
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+}
+
+.modal-basket__choice {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  font-family: "Open Sans";
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: normal;
+  color: $bg-lightblack;
+}
+
+.modal-basket__list {
+  display: flex;
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 25px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  justify-content: space-between;
+}
+
+.modal-basket__item__button {
+  cursor: pointer;
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  font-family: "Open Sans";
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+
+  width: 80px;
+  border: 2px solid #ececec;
+    &:hover {
+      border: 2px solid $bg-darkgreen;
+    }
+    &:focus {
+      border: 2px solid $bg-lightgreen;
+    }
+    &:active {
+      border: 2px solid $bg-lightgreen;
+    }
+}
+
+.modal-basket__item--active button {
+  border: 2px solid $bg-lightgreen;
+}
+
+.modal-basket__button {
+  cursor: pointer;
+  margin: 30px 30px 45px 30px;
+  width: 260px;
+
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $bg-lightgreen;
+  border-color: $bg-lightgreen;
+    &:hover {
+      background-color: $bg-darkgreen;
+    }
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .modal-basket {
+    width: 565px;
+  }
+
+  .modal-basket__title {
+    font-size: 30px;
+    line-height: 57px;
+    padding-top: 45px;
+    width: 360px;
+  }
+
+  .modal-basket__choice {
+    font-size: 17px;
+  }
+
+  .modal-basket__list {
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 350px;
+  }
+
+  .modal-basket__item__button {
+    width: 110px;
+  }
+
+  .modal-basket__button {
+    width: 350px;
+  }
+}
