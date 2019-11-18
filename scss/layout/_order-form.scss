@@ -145,6 +145,7 @@ fieldset {
   cursor: pointer;
 
   padding-left: 60px;
+  height: 40px;
   min-height: 40px;
   margin-top: 20px;
   &::before {
@@ -440,6 +441,7 @@ fieldset {
     margin-top: 25px;
 
     padding-left: 80px;
+    height: 50px;
     min-height: 50px;
 
     &::before {

@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Мишка</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="build/css/style.css"/>
+  <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">-->
 
-  <script type="text/javascript" src="./js/svg4everybody.js"></script>
-  <script>svg4everybody(); // run it now or whenever you are ready</script>
+  <link rel="preload" href="build/fonts/open-sans-v17-cyrillic-700.woff2" as="font"> <!--<предзагрузка для браузера-->
+  <link rel="preload" href="build/fonts/open-sans-v17-cyrillic-regular.woff2" as="font">
 
-  <script type="text/javascript" src="./js/picturefill.min.js"></script>
+  <link rel="stylesheet" href="build/css/style.min.css"/>
+
 <body>
 
 <header class="page-header container page-header--nojs">
@@ -266,7 +266,7 @@
     <a class="page-footer__logo" href="index.html">
       <svg class="page-footer__logo-icon" width="102" height="34" role="img">
         <title>Логотип сайта</title>
-        <use xlink:href="img/sprite.svg#logotype-footer"></use>
+        <use xlink:href="img/sprite.svg#icon-logotype-footer"></use>
       </svg>
     </a>
     <div class="page-footer__social social">

@@ -6,12 +6,12 @@
   <title>Мишка</title>
   <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">-->
 
-  <link rel="stylesheet" href="build/css/style.css"/>
+  <link rel="preload" href="build/fonts/open-sans-v17-cyrillic-700.woff2" as="font"> <!--<предзагрузка для браузера-->
+  <link rel="preload" href="build/fonts/open-sans-v17-cyrillic-regular.woff2" as="font">
 
-  <script type="text/javascript" src="./js/svg4everybody.js"></script>
-  <script>svg4everybody(); // run it now or whenever you are ready</script>
+  <link rel = "stylesheet" href = "node_modules/owl.carousel/dist/assets/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="build/css/style.min.css"/>
 
-  <script type="text/javascript" src="./js/picturefill.min.js"></script>
 </head>
 <body>
 
@@ -134,6 +134,9 @@
           </table>
           <p class="popular__item-picture">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/picture-basket-desktop.webp 1x, img/picture-basket-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/picture-basket-tablet.webp 1x, img/picture-basket-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/picture-basket-mobile.webp 1x, img/picture-basket-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/picture-basket-desktop.jpg 1x, img/picture-basket-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/picture-basket-tablet.jpg 1x, img/picture-basket-tablet@2x.jpg 2x">
               <img class="popular__item-image" src="img/picture-basket-mobile.jpg" srcset="img/picture-basket-mobile@2x.jpg 2x" alt="Фото вязаной корзины">
@@ -179,13 +182,22 @@
       <div class="slider container-indent">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__list slider__list">
-          <blockquote class="reviews__item slider__item">
-            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
-              лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
-              фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            <cite class="reviews__author-name">Анастасия Красильникова</cite>
-            <p class="reviews__author-email">@misssssiskras</p>
-          </blockquote>
+          <div class="owl-carousel">
+            <blockquote class="reviews__item slider__item">
+              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+                лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
+                фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <cite class="reviews__author-name">Анастасия Красильникова</cite>
+              <p class="reviews__author-email">@misssssiskras</p>
+            </blockquote>
+            <blockquote class="reviews__item slider__item">
+              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+                лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
+                фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <cite class="reviews__author-name">Анастасия Красильникова</cite>
+              <p class="reviews__author-email">@misssssiskras</p>
+            </blockquote>
+          </div>
         </div>
         <p class="reviews__toggles slider__toggles">
           <button class="button slider__toggle slider__toggle--left" type="button">
@@ -242,7 +254,7 @@
       <a class="page-footer__logo">
         <svg class="page-footer__logo-icon" width="102" height="34" role="img">
           <title>Логотип сайта</title>
-          <use xlink:href="img/sprite.svg#logotype-footer"></use>
+          <use xlink:href="img/sprite.svg#icon-logotype-footer"></use>
         </svg>
       </a>
       <div class="page-footer__social social">
@@ -285,7 +297,26 @@
   </div>
 </footer>
 
-<script type="text/javascript" src="./build/js/app.js"></script>
+<section class="modal modal-basket">
+  <h2 class="modal-basket__title">Добавить в корзину</h2>
+    <p class="modal-basket__choice">Выберите размер:</p>
+      <ul class="modal-basket__list">
+        <li class="modal-basket__item">
+          <button class="button modal-basket__item__button" autofocus type="button">S</button>
+        </li>
+        <li class="modal__item">
+          <button class="button modal-basket__item__button" type="button">M</button>
+        </li>
+        <li class="modal__item">
+          <button class="button modal-basket__item__button" type="button">L</button>
+        </li>
+      </ul>
+  <button class="button modal-basket__button" type="submit">Добавить</button>
+</section>
 
+<div class="modal overlay"></div>
+
+<script type="text/javascript" src="./build/js/app.js"></script>
+<script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
 </body>
 </html>

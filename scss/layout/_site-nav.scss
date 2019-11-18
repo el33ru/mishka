@@ -1,0 +1,176 @@
+.site-nav {
+  width: 100%;
+}
+
+.nav__list {
+  @include reset-list;
+}
+
+.site-nav__desktop {
+  display: none;
+}
+
+.site-list__item {
+  display: inline-block;
+  width: 100%;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.site-list__item a {
+  display: block;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 75px;
+
+  font-size: 17px;
+  line-height: 19px;
+  color: black;
+
+  text-decoration: none;
+}
+
+.site-list__item__catalog {
+  border-top: 1px solid #ececec;
+}
+
+.site-list a[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.site-list__desktop a[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.nav__list {
+  display: none;
+}
+
+
+@media (max-width: $mobile-width-only) {
+  .page-header--nojs .nav__list {
+    display: block;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .site-nav {
+    order: 3;
+
+    width: auto;
+  }
+  .site-list__item__catalog {
+    padding-left: 50px;
+
+    border: none;
+  }
+
+  .site-list__item {
+    display: inline-block;
+
+    border-bottom: none;
+  }
+
+  .site-list__item a {
+    padding: 0;
+    margin-top: 22px;
+    margin-right: 36px;
+
+    font-size: 15px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+
+  .nav__list{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .site-nav__desktop {
+    display: block;
+  }
+
+  .site-nav {
+    order: 1;
+  }
+
+  .site-list__item__catalog {
+    padding: 0;
+    margin: 0;
+  }
+
+  .site-nav__desktop {
+    order: 4;
+  }
+
+  .site-list__item {
+    display: inline-block;
+
+    width: 100%;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .site-list__item a {
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    font-size: 17px;
+    line-height: 19px;
+  }
+
+  .site-list__item__catalog a {
+    padding-left: 50px;
+    padding-right: 36px;
+
+    border-right: 1px solid #ececec;
+  }
+
+  .site-list__item__knitting a {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .site-list__item__desktop {
+    display: inline-block;
+
+    border-bottom: none;
+  }
+
+  .site-list__item__desktop  a {
+    display: block;
+    padding: 0;
+    margin-top: 22px;
+    margin-left: 50px;
+
+    text-decoration: none;
+    color: black;
+
+    font-size: 15px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+
+  .site-list__item__desktop__sales {
+    padding-left: 12px;
+  }
+}

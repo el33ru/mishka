@@ -1,0 +1,39 @@
+.js__toggle {
+  cursor: pointer;
+  position: absolute;
+  top: 29px;
+  right: 30px;
+
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+
+  background-color: #ffffff;
+  border: none;
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 2px;
+
+    background-color: #221f1f;
+    box-shadow: 0 6px 0 0 #221f1f, 0 12px 0 0 #221f1f;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .toggle-status--nojs .js__toggle {
+    display: none;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .toggle-status {
+    display: none;
+  }
+}

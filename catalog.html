@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Мишка</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="build/css/style.css"/>
+  <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">-->
 
-  <script type="text/javascript" src="./js/svg4everybody.js"></script>
-  <script>svg4everybody();</script>
+  <link rel="preload" href="build/fonts/open-sans-v17-cyrillic-700.woff2" as="font"> <!--<предзагрузка для браузера-->
+  <link rel="preload" href="build/fonts/open-sans-v17-cyrillic-regular.woff2" as="font">
 
-  <script type="text/javascript" src="./js/picturefill.min.js"></script>
+  <link rel="stylesheet" href="build/css/style.min.css"/>
+
 </head>
 <body>
 
@@ -84,6 +84,9 @@
       <li class="catalog__item">
         <div class="catalog__images">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
             <img class="catalog__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Фото зайчика-попрыгайчика">
@@ -107,6 +110,9 @@
       <li class="catalog__item">
         <div class="catalog__images">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-2-mobile.webp 1x, img/photo-2-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
             <img class="catalog__image" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Фото корзины для белья">
@@ -130,6 +136,9 @@
       <li class="catalog__item">
         <div class="catalog__images">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-3-mobile.webp 1x, img/photo-3-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
             <img class="catalog__image" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Фото большой корзины для игрушек">
@@ -157,6 +166,9 @@
     <section class="production">
       <div class="production__images">
         <picture>
+          <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
           <source media="(min-width: 1150px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
           <img class="production__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео процесса производства">
@@ -180,7 +192,7 @@
       <a class="page-footer__logo" href="index.html">
         <svg class="page-footer__logo-icon" width="102" height="34" role="img">
           <title>Логотип сайта</title>
-          <use xlink:href="img/sprite.svg#logotype-footer"></use>
+          <use xlink:href="img/sprite.svg#icon-logotype-footer"></use>
         </svg>
       </a>
       <div class="page-footer__social social">

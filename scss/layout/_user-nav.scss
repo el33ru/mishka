@@ -1,0 +1,144 @@
+.user-nav {
+  width: 100%;
+}
+
+.user-list__item {
+  display: inline-block;
+  width: 100%;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.user-list__search {
+  position: relative;
+}
+
+.user-list__search-icon {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+
+  width: 18px;
+  height: 18px;
+
+  opacity: 0.2;
+
+  fill: #231F20;
+}
+
+.user-list__item--search:hover {
+  &:hover .user-list__search-icon {
+      opacity: 1;
+
+      fill: #63d1bb;
+    }
+    &:active .user-list__search-icon {
+      opacity: 0.3;
+
+      fill: #63d1bb;
+    }
+}
+
+
+.user-list__basket {
+  position: relative;
+}
+
+.user-list__basket-icon {
+  position: absolute;
+  top: 30px;
+  left: 32px;
+
+  width: 21px;
+  height: 18px;
+
+  opacity: 0.2;
+
+  fill: #231F20;
+}
+
+.user-list__item a {
+  display: block;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 75px;
+
+  font-size: 17px;
+  line-height: 19px;
+  color: #000000;
+
+  text-decoration: none;
+}
+
+.user-list__basket {
+  &:hover {
+    color: #666666;
+  }
+  &:active {
+    color: #cacaca;
+  }
+  &:hover  .user-list__basket-icon {
+    opacity: 1;
+
+    fill: #63d1bb;
+  }
+    &:active .user-list__basket-icon  {
+      opacity: 0.3;
+
+      fill: #63d1bb;
+    }
+}
+
+
+
+@media (min-width: $tablet-width) {
+  .user-nav {
+    order: 2;
+
+    width: auto;
+  }
+
+  .user-list__search {
+    box-sizing: border-box;
+    height: 90px;
+    //width: 80px;
+  }
+
+  .user-list__item--basket a {
+    padding-left: 83px;
+    padding-right: 50px;
+    text-align: right;
+  }
+
+  .user-list__item a {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .user-list__search-icon {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .user-list__basket-icon {
+    top: 36px;
+    left: 30px;
+  }
+
+  .user-list__search__no-caption {
+    display: none;
+  }
+
+  .user-list__item--search {
+    width: 80px;
+    box-sizing: border-box;
+
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+  }
+
+}
